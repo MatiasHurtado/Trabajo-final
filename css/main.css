@@ -1,0 +1,880 @@
+/*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 2.1.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: rgb(240, 148, 73);
+  font-size: 1em;
+  line-height: 1.4;
+}
+.clearfix:after {
+  content: " "; /* Older browser do not support empty content */
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+html{
+  box-sizing: border-box;
+}
+*,*:before,*:after{
+  box-sizing:inherit;
+}
+body{
+  background-color: rgb(246, 248, 250);
+  font-family: 'Open Sans', sans-serif;
+  
+}
+/**GLOBALES**/
+.contenedor{
+  width:98%;
+  margin:0 auto;
+}
+@media only screen and (min-width:480px){
+  .contenedor{
+    width:95%;
+  }
+}
+@media only screen and (min-width:768px){
+  .contenedor{
+    width:90%;
+  }
+}
+@media only screen and (min-width:992px){
+  .contenedor{
+    width:90%;
+    max-width:1100px;
+  }
+}
+.seccion{
+  padding:30px 0;
+}
+.seccion p{
+  font-size: 2.4em;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+
+}
+h2{
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.4em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #000000;
+}
+ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+h3{
+  font-size:1.8em;
+  color: rgb(253, 80, 0);
+  font-family: 'PT Sans', sans-serif;
+  margin:0;
+}
+.button{
+  background: #fe4918;
+  padding: 10px 40px;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1em;
+  margin-top:20px;
+  display: inline-block;
+  transition: all .3s ease;
+  border:2px solid #fe4918;
+}
+.button.hollow,button.hollow:hover{
+  background-color:white;
+  color:#fe4918;
+}
+.button:hover{
+ background: #e33080;
+}
+.button.trasparente{
+  background-color: transparent;
+  border-color: #ffffff;
+}
+.button.trasparente:hover{
+  background: #fe4918;
+  transition: all .3s ease;
+  border-color:#fe4918;
+}
+.float-right{
+float: right;
+}
+h2::after{
+  content:"" ;
+  margin:0 auto;
+  background-image: url(../img/separador.png) ;
+  height: 30px;
+  width: 100px;
+  
+  display: block;
+}
+
+/** Header **/
+div.hero{
+  background-image:url(../img/encabezado.jpg);
+  height:100vh ;
+  background-position:top center;
+  background-size: cover;
+}
+div.contenido-header{
+  padding-top:40px;
+}
+nav.redes-sociales{
+  text-align: center;
+}
+@media only screen and (min-width:768px){
+  div.contenido-header{
+    padding-top:10px;
+  }
+}
+nav.redes-sociales a{
+  color:#08bff7;
+  font-size: 1.5em;
+  margin-right:25px;
+
+}
+nav.redes-sociales a:last-child{
+  margin-right: 0;
+}
+div.informacion-evento{
+  text-align: center;
+  color: #9d08f3;
+}
+@media only screen and (min-width:768px){
+  div.informacion-evento{
+    width:70%;
+    margin:0 auto;
+    margin-top:50px;
+  }
+}
+div.informacion-evento p{
+  margin:0;
+  display: inline;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+div.informacion-evento p i{
+  color: rgba(243, 125, 14, 0.925);
+  font-size:2rem;
+}
+p.fecha{
+  float:left;
+}
+p.ciudad{
+  float:right;
+  text-align: center;
+}
+p.slogan{
+  text-transform: none!important;
+}
+p.slogan span{
+  font-weight: bold;
+}
+h1.nombre-sitio{
+  font-size: 5.9vw;
+  text-transform:uppercase;
+  font-family: 'PT Sans', sans-serif;
+}
+@media only screen and (min-width:768px){
+  h1.nombre-sitio{
+    font-size: 11.5vw;
+    margin:0;
+    line-height: 1;
+  }
+}
+
+/** Barra **/
+
+div.barra{
+  background-color:rgb(44, 42, 56);
+  padding:20px 0;
+}
+div.logo{
+  width:80%;
+  float:left;
+}
+div.logo img{
+  width: 100%;
+}
+@media only screen and (min-width:768px){
+  div.logo{
+    width:33%;
+  }
+}
+/** navegacion principal**/
+
+nav.navegacion-principal{
+  display: none;
+}
+
+nav.navegacion-principal a{
+  font-family: 'Oswald', sans-serif;
+  color: #ccc;
+  font-size:1.3em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all .6s ease;
+  width: 100%;
+  display: block;
+  text-align: center;
+  margin-bottom: 20px;
+}
+nav.navegacion-principal a:last-child{
+  border:2px solid #f07a0b;
+  color:#9b2704;
+}
+nav.navegacion-principal a:hover{
+  background-color: rgb(245, 73, 4);
+  color: rgb(9, 252, 252);
+ }
+
+ /** Menu Movil**/
+ div.menu-movil{
+   width:60px;
+   display: block;
+   float: right;
+   text-align: right;
+   margin-top:12px ;
+ }
+ div.menu-movil:hover{
+   cursor:pointer;
+ }
+ @media only screen and (min-width:768px){
+  div.menu-movil{
+    display: none;
+  }
+ }
+ div.menu-movil span{
+  height:8px;
+  margin-bottom: 6px;
+  background-color: white;
+  display: block;
+}
+/** Talleres**/
+/** Se ocupo un position relative para poder hacer que el cuadro de contenido entrara
+en el video , como se sabia anterior mente se debe poner en el padre(relative)
+y en el hijo absolute para asi unirlos**/
+section.programa{
+  position: relative;
+
+}
+
+div.contenedor-video{
+  max-width:100%;
+  overflow: hidden;
+}
+
+div.contenido-programa{
+  position:absolute;
+  top:0;
+  left: 0;
+  height:100%;
+  width: 100%;
+}
+
+div.programa-evento{
+  background-color: rgba(255, 255, 255, .8);
+  padding: 15px;
+  margin-top:80px;
+}
+@media only screen and (min-width:768px){
+  div.programa-evento{
+    width:60%;
+  }
+}
+@media only screen and (min-width:992){
+  div.programa-evento{
+    width:50%;
+  }
+}
+nav.menu-programa{
+  width: 100%;
+  border-bottom:1px solid #f07a0b;
+  padding-bottom: 10px;
+
+}
+@media only screen and (min-width:768px){
+  nav.menu-programa{
+    display: table;
+  }  
+}
+nav.menu-programa a{
+  display: block;
+  text-align: center;
+  color: black;
+  text-decoration: none;
+  font-family: 'Oswald', sans-serif;
+  margin-bottom:10px;
+  font-size: 1.4em;
+}
+@media only screen and (min-width:768px){
+  nav.menu-programa a{
+    display: table-cell;
+  }  
+}
+nav.menu-programa a i{
+ color:  rgba(243, 125, 14, 0.925);
+}
+
+
+/** Talleres**/
+
+/**Detalle Evento**/
+/**El nth child nos permite seleccionar a los hijos de una clase que tengamos
+en este caso solo queriamos un border para un div detalle-evento**/
+div.detalle-evento{
+  margin-top:20px;
+  border-bottom: 1px solid black;
+  padding:0 20px ;
+}
+
+div.detalle-evento:nth-child(2){
+  border:none;
+}
+div.detalle-evento p{
+  margin-bottom:20px;
+  font-size:20px;
+}
+/**Detalle Evento**/
+@media only screen and (min-width:768px){
+  nav.navegacion-principal{
+    width:67%;
+    float:right;
+    text-align:right;
+    display: block;
+    
+  }
+  nav.navegacion-principal a{ 
+   margin-right: 10px;
+   padding: 10px 10px;
+   display: inline-block;
+   width: auto;
+   display: inline-block;
+    text-align: center;
+    margin:0 10px 0 0;
+    }
+}
+/**Section Invitados**/
+section.invitados-contenedor-seccion{
+  margin-bottom:50px;
+}
+ul.lista-invitados{
+  margin:0 20px;
+}
+@media only screen and (min-width:768px){
+  ul.lista-invitados{
+    margin:0 100px;
+  }
+}
+ul.lista-invitados li{
+  padding: 10px;
+  float: left;
+}
+@media only screen and (min-width:480px){
+  ul.lista-invitados li{
+   width:50%;
+  }
+}
+@media only screen and (min-width:768px){
+  ul.lista-invitados li{
+   width:33.3%;
+  }
+}
+
+div.invitados{
+  position: relative;
+  overflow: hidden;
+}
+div.invitados img{
+  width: 100%;
+  max-width: 100%;
+  filter: gray;
+  -webkit-filter: grayscale(1);
+  -webkit-transition: all .5s ease-in-out;
+}
+
+div.invitados:hover img{
+  -webkit-filter: grayscale(0);
+  -webkit-transform: scale(1.1);
+}
+div.invitados p {
+  color: #f34703;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 15px 10px;
+  margin:0;
+  width: 100%;
+  text-align: left;
+  text-transform: uppercase;
+  background-color: rgb(0, 0, 0,0.55);
+  font-family: 'Oswald', sans-serif;
+  -webkit-transition: all .5s ease-in-out;
+}
+div.invitados:hover p{
+  bottom:-80px;
+  opacity: 0;
+}
+/**Section Invitados**/
+
+/**Contador**/
+.paralax::before{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top:0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position:center;
+  background-attachment: fixed;
+  -webkit-filter: brightness(.10);
+  filter:brightness(.5);
+}
+div.contador{
+  position:relative;
+  height: auto;
+}
+div.contador::before{
+  background-image:url(../img/bg-resumen.jpg);
+  content: "";
+}
+ul.resumen-evento{
+  position: relative;
+  padding: 120px 0;
+}
+ul.resumen-evento li{
+  width:50%;
+  float: left;
+  text-align: center;
+  color: #f8f6ff;
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  font-size: 24px;
+
+}
+
+@media only screen and (min-width:768px){
+  ul.resumen-evento li{
+    width: 25%;
+  }
+}
+/**Contador**/
+
+/**Tabla precios**/
+p.numero{
+  color: rgb(245, 73, 4);
+  font-size: 4em;
+  display: block;
+  margin:0 0 10px 0;
+  font-family: 'Oswald', sans-serif;
+
+}
+ul.lista-precios > li{
+  padding: 10px;
+}
+/** se ocupa el (>) para decirle al css que solo queremos el primer li ya que este ul posee 2 **/
+@media only screen and (min-width:768px){
+  ul.lista-precios > li{
+    float: left;
+    width: 33.3%;
+  }
+}
+div.tabla-precio h3{
+  font-size: 0.9rem!important;
+}
+div.tabla-precio{
+  border:1px solid #e1e1e1;
+  background-color: #ffffff;
+  padding:40px 0;
+  text-align: center;
+  transition: all .3s;
+}
+div.tabla-precio:hover{
+  transform: scale(1.1);
+  border:1px solid #0f0c0b ;
+  box-shadow: 0px 0px 50px #666 ;
+   
+}
+div.tabla-precio ul li{
+  font-family: 'PT Sans', sans-serif;
+  font-size: 14px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  color: #868686;
+  line-height: 26px;
+}
+div.tabla-precio ul li:before{
+  font-family:'Font Awesome 5 Free';
+  display: inline-block;
+  vertical-align:top;
+  padding:0 5px;
+  font-size: 20px;
+  color: green;
+  -webkit-flow-smoothing:antialiased;
+  content:"\f14a";
+}
+div.lista-precios h3{
+  font-family: 'Oswald', sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+div.tabla-precio p.numero{
+  color: #000000;
+  margin-top:10px;
+}
+/**Tabla precios**/
+/**Mapa**/
+div.mapa{
+  height:420px;
+  background-color: turquoise;
+}
+/**Mapa**/
+
+/**Testimoniales**/
+div.testimoniales{
+  padding: 20px;
+}
+div.testimonial{
+  padding: 5px;
+}
+@media only screen and (min-width:768px){
+  div.testimonial{
+    float: left;
+    width:33.3%;
+  }
+}
+blockquote{
+  background-color: #ffffff;
+  border:1px solid #e1e1e1;
+  position: relative;
+  margin:0 0 10px 0;
+  padding-bottom: 20px;
+}
+blockquote p{
+  text-align: left!important;
+  font-size: 1em!important;
+  font-family: 'PT Sans', sans-serif!important;
+  padding: 0 20px 0 65px;
+
+}
+blockquote p::before{
+  font-family:'Font Awesome 5 Free';
+  content:"\201c";
+  position:absolute;
+  left:15px;
+  top:0;
+  font-size: 6rem;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  color: rgb(230, 66, 1);
+
+}
+footer.info-testimonial{
+  padding: 0;
+  background-color: transparent;
+}
+footer.info-testimonial img{
+  flaot:left;
+  width: 20%;
+  border-radius: 50%;
+  margin-left: 20px;
+}
+footer.info-testimonial cite{
+  text-align:left ;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding-top:20px;
+  width: 66.6%;
+  float: right;
+  font-weight: bold;
+  font-style: normal;
+}
+footer.info-testimonial cite span{
+  color:#000000;
+  display: block;
+  text-transform: none;
+  margin-top: 10px;
+}
+/**Testimoniales**/
+
+/**Newsletter¨**/
+div.newsletter{
+  position: relative;
+  height: auto;
+
+
+}
+div.newsletter::before{
+  background-image:url(../img/bg-newsletter.jpg);
+  content: '';
+}
+div.newsletter .contenido{
+  padding: 100px 0;
+  color: #ffffff;
+  text-align: center;
+  position: relative;
+}
+div.newsletter .contenido p{
+font-size: 1.2em;
+text-transform: lowercase;
+}
+div.newsletter .contenido h3{
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 7vw;
+  font-family: 'PT Sans', sans-serif;
+
+}
+/**Newsletter¨**/
+
+
+
+/**Cuenta Regresiva**/
+div.cuenta-regresiva ul li{
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.4em;
+  text-align: center;
+}
+
+
+@media only screen and (min-width:768px){
+  div.cuenta-regresiva ul li{
+    width: 25%;
+    float: left;
+  }
+}
+/**Cuenta Regresiva**/
+/**Footer**/
+footer{
+  background-color: #353535;
+  padding-top:40px ;
+  margin-top: 20px;
+}
+footer .contenedor > div{
+  color: #ffffff;
+  padding: 0 20px;
+  font-size: 12px;
+}
+@media only screen and (min-width:768px){
+  footer .contenedor > div{
+    width: 33.3%;
+    float: left;
+  }
+}
+footer h3{
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+footer h3 spam{
+  color: #fe4918
+}
+footer .ultimos-tweets li{
+  margin-bottom:10px;
+}
+footer nav.redes-sociales {
+  float: left;
+}
+p.copyright{
+  background-color: #2e2e2e;
+  color: #e1e1e1;
+  padding: 10px 0;
+  margin: 0;
+  text-align: center;
+}
+/**Footer**/
+
+/**Registros**/
+form.registro h3{
+  margin:20px 0 0 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+form.registro label{
+  margin-bottom:5px ;
+  font-weight: bold;
+} 
+h4{
+  text-align: center;
+  text-transform: uppercase;
+  border-bottom:2px solid #fe4918;
+  padding-bottom:10px;
+  font-size: 1.2em;
+}
+div.caja{
+  background-color:white ;
+  border:1px solid #e1e1e1;
+  padding: 10px;
+  margin:10px;
+}
+div.campo{
+  padding: 20px;
+}
+@media only screen and (min-width:768px){
+  div.campo{
+    float: left;
+    width: 33.3%;
+  }
+}
+div.paquetes .tabla-precio:hover{
+  transform: none;
+  box-shadow: none;
+}
+div.paquetes .tabla-precio input{
+  clear: both;
+  width: 100px;
+  margin:10px auto 0 auto;
+  display: block;
+}
+.contenido-dia{
+  padding: 20px;
+}
+@media only screen and (min-width:768px){
+
+.contenido-dia > div{
+  float: left;
+  width: 33.3%;
+
+}
+}
+.contenido-dia >div p{
+  text-align:left;
+
+}
+.contenido-dia >div label{
+  display: block;
+  margin-bottom: 10px ;
+
+}
+div.contenido-dia >div input{
+  margin-right: 10px;
+  
+}
+div.contenido-dia >div label time{
+  color: #fe4918;
+  color: #321a49;
+  font-weight: bold;
+}
+/**Registros**/
+/**Resumen Registro**/
+div.resumen p{
+  font-size:1.2em ;
+  text-transform: uppercase;
+}
+div.resumen div.extras{
+float: left;
+width: 50%;
+padding: 30px;
+}
+div.resumen div.orden{
+  text-align: left;
+  margin-bottom: 10px;
+}
+div.resumen div.orden input{
+  margin:10px 0 0 0;
+}
+div.resumen div.total{
+  float: right;
+  width: 50%;
+  padding: 30px;
+}
+div.resumen input{
+  display: block;
+  margin: 10px auto;
+}
+/**Resumen Registro**/
+
+
+.hidden{
+  display:none!important;
+}
