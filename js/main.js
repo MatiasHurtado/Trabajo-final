@@ -40,11 +40,8 @@
 
                     var totalPagar=(boletosDia * 38) + (boletos2Dias * 45) +(boletoCompleto *50);
                     console.log(totalPagar);
-           
-
-
             }
-            
+             
         }
 
   
