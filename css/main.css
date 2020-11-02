@@ -818,6 +818,7 @@ div.paquetes .tabla-precio input{
 }
 .contenido-dia{
   padding: 20px;
+  display: none;
 }
 @media only screen and (min-width:768px){
 
@@ -829,6 +830,10 @@ div.paquetes .tabla-precio input{
 }
 .contenido-dia >div p{
   text-align:left;
+  font-size:1.6em;
+  color: #000000;
+  font-weight: bold;
+  
 
 }
 .contenido-dia >div label{
@@ -871,6 +876,18 @@ div.resumen div.total{
 div.resumen input{
   display: block;
   margin: 10px auto;
+}
+
+#lista-productos{
+  color: #000000;
+  background-color: #e1e1e1;
+  padding: 20px;
+  display: none;
+}
+#suma-total{
+text-align: center;
+font-size: 2em;
+color: #000000;
 }
 /**Resumen Registro**/
 

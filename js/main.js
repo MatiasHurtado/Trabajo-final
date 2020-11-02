@@ -18,12 +18,16 @@
         var error = document.getElementById('error');
         var btnRegistro = document.getElementById('btnRegistro');
         var lista_Productos= document.getElementById('lista-productos');
+        var suma = document.getElementById('suma-total');
 
 
         //Extras 
         var camisas = document.getElementById('camisa_evento');
         var etiquetas = document.getElementById('etiquetas');
         calcular.addEventListener('click', calcularMontos);
+        pase_dia.addEventListener('blur',mostrardias);
+        pase_dosdia.addEventListener('blur',mostrardias);
+        pase_completo.addEventListener('blur ',mostrardias);
         
 
         function calcularMontos(event){
@@ -59,17 +63,40 @@
                     }
                     if(cantEtiquetas >=1){
                         listadoProductos.push(cantEtiquetas + ' Etiquetas')
-                    }
+                    } 
 
-
-
-
-                   
+                   lista_Productos.style.display = "block",
                     lista_Productos.innerHTML ='';
                     for(var i=0; i<listadoProductos.length; i++)
                     lista_Productos.innerHTML += listadoProductos[i] + '<br/>';
             }
+            suma.innerHTML = "$ " + totalPagar.toFixed(2);
              
+        }
+        function mostrardias(){
+            console.log('has hecho click');
+            var boletosDia =  parseInt(pase_dia.value,10)||0,
+            boletos2Dias = parseInt(pase_dosdia.value,10)||0,
+            boletoCompleto = parseInt(pase_completo.value,10)||0;
+            
+            var diasElegidos= [];
+            
+            if (boletosDia > 0){
+                diasElegidos.push('viernes');
+                console.log(diasElegidos);
+            }
+            if(boletos2Dias > 0){
+                diasElegidos.push('viernes','sabado');
+                console.log(diasElegidos);
+            }
+            if(boletoCompleto > 0){
+                diasElegidos.push('viernes','sabado','domingo');
+                console.log(diasElegidos);
+            }
+            for(var i = 0; i < diasElegidos.length; i++){
+                document.getElementById(diasElegidos[i]).style.display='block';
+            }
+
         }
 
   
