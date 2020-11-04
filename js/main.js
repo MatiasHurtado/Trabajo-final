@@ -30,6 +30,7 @@
         pase_completo.addEventListener('blur ',mostrardias);
         
 
+        // funcion que nos calcula el dinero y lo muestra en el html
         function calcularMontos(event){
             event.preventDefault();
             if(regalo.value ===''){
@@ -73,6 +74,7 @@
             suma.innerHTML = "$ " + totalPagar.toFixed(2);
              
         }
+        // funcion que nos despliga los dias de acuerdo al boleto que solicitemos
         function mostrardias(){
             console.log('has hecho click');
             var boletosDia =  parseInt(pase_dia.value,10)||0,
