@@ -890,8 +890,12 @@ font-size: 2em;
 color: #000000;
 }
 /**Resumen Registro**/
-
-
+#error{
+  clear: both;
+  padding: 20px;
+  text-align: center;
+  display: none;
+}
 .hidden{
   display:none!important;
 }

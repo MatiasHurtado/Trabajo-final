@@ -15,7 +15,7 @@
 
         //Botones y divs
         var calcular = document.getElementById('calcular');
-        var error = document.getElementById('error');
+        var errorDiv = document.getElementById('error');
         var btnRegistro = document.getElementById('btnRegistro');
         var lista_Productos= document.getElementById('lista-productos');
         var suma = document.getElementById('suma-total');
@@ -27,11 +27,44 @@
         calcular.addEventListener('click', calcularMontos);
         pase_dia.addEventListener('blur',mostrardias);
         pase_dosdia.addEventListener('blur',mostrardias);
-        pase_completo.addEventListener('blur ',mostrardias);
-        
+        pase_completo.addEventListener('blur',mostrardias);
+
+        nombre.addEventListener('blur',validarCampos);
+        apellido.addEventListener('blur',validarCampos);
+        email.addEventListener('blur',validarCampos);
+        email.addEventListener('blur',validarMail);
+
+
+        function validarCampos(){
+            if(this.value ==''){
+                errorDiv.style.display='block';
+                errorDiv.innerHTML = "Este campo es obliagatorio";
+                this.style.border ='1px solid red';
+                errorDiv.style.border ='1px solid red';
+            }else{
+                errorDiv.style.display = 'none';
+                this.style.border ='1px solid #cccccc';
+
+            }
+        }
+      function validarMail(){
+          if(this.value.length >=1){
+            if(this.value.indexOf("@")> -1){
+                errorDiv.style.display = 'none';
+                this.style.border ='1px solid #cccccc';
+              }else{
+                errorDiv.style.display='block';
+                errorDiv.innerHTML = "Debe contener @";
+                this.style.border ='1px solid red';
+                errorDiv.style.border ='1px solid red';
+              }
+          }
+         
+
+      }
 
         // funcion que nos calcula el dinero y lo muestra en el html
-        function calcularMontos(event){
+        function calcularMontos(event){ 
             event.preventDefault();
             if(regalo.value ===''){
             alert("Debes elegir un regalo");
@@ -66,7 +99,7 @@
                         listadoProductos.push(cantEtiquetas + ' Etiquetas')
                     } 
 
-                   lista_Productos.style.display = "block",
+                   lista_Productos.style.display = 'block';
                     lista_Productos.innerHTML ='';
                     for(var i=0; i<listadoProductos.length; i++)
                     lista_Productos.innerHTML += listadoProductos[i] + '<br/>';
