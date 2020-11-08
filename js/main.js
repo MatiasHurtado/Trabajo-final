@@ -4,15 +4,17 @@
     var regalo=document.getElementById('regalo');
     document.addEventListener("DOMContentLoaded" ,function(){
         var map = L.map('mapa').setView([-33.50891, -70.773239],20);
+//cordenadas de la direccion
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
-
+//cordenadas de la direccion
 L.marker([-33.50891, -70.773239]).addTo(map)
     .bindPopup('GDLWebCamp 2018 <br> Boletos Ya')
     .openPopup();
         
+
         //  Campos Pases
         var nombre = document.getElementById('nombre');
         var apellido = document.getElementById('apellido');
