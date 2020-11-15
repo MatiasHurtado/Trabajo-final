@@ -3,7 +3,7 @@
 $(document).ready(function(){
     $('#contenido').append("con jQuery es mas facil")
 });
-//Javascrip puro
+//Javascrip puro Empezando con Nicolas
 document.addEventListener('DOMContentLoaded',function(event){
     var elemento = document.getElementById('contenido2');
     var parrafo = document.createElement('p');
