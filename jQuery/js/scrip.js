@@ -4,6 +4,7 @@ $(document).ready(function(){
     $('#contenido').append("con jQuery es mas facil")
 });
 //Javascrip puro Empezando con Nicolas
+//Progesando con nicolas uso de css 
 document.addEventListener('DOMContentLoaded',function(event){
     var elemento = document.getElementById('contenido2');
     var parrafo = document.createElement('p');
